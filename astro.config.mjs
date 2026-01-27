@@ -6,6 +6,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://endide.github.io/portfolio-ppp/',
+  site: 'https://endide.github.io',
+  base: '/portfolio-ppp',
   integrations: [mdx(), sitemap(), icon()]
 });
