@@ -6,6 +6,6 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://endide.github.io',
+  site: 'https://siteweb.endide.com/',
   integrations: [mdx(), sitemap(), icon()]
 });
