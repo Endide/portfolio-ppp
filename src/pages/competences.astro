@@ -1,0 +1,145 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+<!doctype html>
+<html lang="fr">
+<head>
+<BaseHead title="Compétences" description={SITE_DESCRIPTION} />
+<style>
+.competence-section {
+  margin-bottom: 42px;
+  border-left: 7px solid #3e64ff;
+  background: linear-gradient(95deg,#f9fafc 80%,#e8eefa 100%);
+  padding: 22px 24px 18px 22px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px 0 #e5eaff80;
+  max-width: 900px;
+  margin-left: auto; margin-right: auto;
+}
+.competence-section:nth-child(3){border-color:#ffc043;}
+.competence-section:nth-child(4){border-color:#37c978;}
+.competence-section:nth-child(5){border-color:#90b7f5;}
+.competence-section:nth-child(6){border-color:#8d6cab;}
+.competence-section:nth-child(7){border-color:#ee5253;}
+
+.competence-title {
+  margin-bottom: 6px;
+  color: #232f51;
+  font-size: 1.29em;
+}
+.competence-desc {
+  font-size: 1.11em;
+  margin-bottom: 8px;
+  color: #413e5a;
+}
+ul.synth-list {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+@media (max-width: 750px) {
+  .competence-section {
+    padding: 12px 4vw 14px 10px;
+    min-width: unset; max-width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<Header title={SITE_TITLE} />
+<main>
+<h1>Compétences principales</h1>
+<p>
+Grâce à mon parcours en BUT Informatique (Parcours Réalisation d’applications), j’ai acquis une solide base technique et méthodologique. Ces compétences sont mises à profit dans mes projets, mes stages et mon travail en équipe. Voici une synthèse pratique de ce que je sais faire.
+</p>
+
+<!-- RÉALISER -->
+<div class="competence-section">
+  <div class="competence-title">Développement complet d’applications</div>
+  <div class="competence-desc">
+    Conception, réalisation et maintenance d’applications – de la prise en compte des besoins client jusqu’au test et à la mise en production. Capable de réaliser des applications pour le web, le mobile ou l’embarqué, en m’adaptant aux contraintes du support.
+  </div>
+  <ul class="synth-list">
+    <li>Élaboration de cahier des charges et spécifications fonctionnelles</li>
+    <li>Production de code clair, documenté et testé</li>
+    <li>Conception d’interfaces utilisateurs ergonomiques</li>
+    <li>Intégration dans des architectures variées (microservices, mono-app, connectée…)</li>
+  </ul>
+</div>
+
+<!-- OPTIMISER -->
+<div class="competence-section">
+  <div class="competence-title">Optimisation et performance</div>
+  <div class="competence-desc">
+    Analyse et amélioration du fonctionnement des applications : choix et mise en œuvre des bons algorithmes, gestion des ressources, optimisation temps réel, montée en charge et sécurisation.
+  </div>
+  <ul class="synth-list">
+    <li>Comparaison et sélection de structures de données/algorithmes pour répondre à des besoins précis</li>
+    <li>Optimisation du temps d'exécution et de la consommation mémoire</li>
+    <li>Analyse de l’impact environnemental / sobriété numérique</li>
+    <li>Profiling et débogage de code existant</li>
+  </ul>
+</div>
+
+<!-- ADMINISTRER -->
+<div class="competence-section">
+  <div class="competence-title">Administration système et réseau</div>
+  <div class="competence-desc">
+    Installation et configuration d’environnements de travail, déploiement et supervision de services sur architectures réseau, gestion de la sécurité et de la continuité de service.
+  </div>
+  <ul class="synth-list">
+    <li>Mise en place de systèmes d’exploitation et outils de développement</li>
+    <li>Déploiement d’applications sur serveurs, virtualisation</li>
+    <li>Sécurisation des accès, des données et des échanges</li>
+  </ul>
+</div>
+
+<!-- GÉRER -->
+<div class="competence-section">
+  <div class="competence-title">Gestion et exploitation de la donnée</div>
+  <div class="competence-desc">
+    Conception, administration et interrogation de bases de données. Mise en place de la sécurité, de l’intégrité, et exploitation avancée pour l’aide à la décision.
+  </div>
+  <ul class="synth-list">
+    <li>Modélisation et réalisation de schémas relationnels</li>
+    <li>Requêtage SQL/NoSQL, data visualisation, transformation et restitution</li>
+    <li>Optimisation de la performance des traitements sur la donnée</li>
+  </ul>
+</div>
+
+<!-- CONDUIRE -->
+<div class="competence-section">
+  <div class="competence-title">Gestion de projet & suivi client</div>
+  <div class="competence-desc">
+    Recueil et formalisation du besoin, gestion agile ou classique de projet, communication avec les différents acteurs et adaptation aux évolutions du contexte ou des contraintes.
+  </div>
+  <ul class="synth-list">
+    <li>Organisation et planification du projet (outils de gestion, suivi de tâches, reporting)</li>
+    <li>Animation de réunions, gestion de la relation client/utilisateur</li>
+    <li>Démarche qualité et veille technologique</li>
+  </ul>
+</div>
+
+<!-- COLLABORER -->
+<div class="competence-section">
+  <div class="competence-title">Travail en équipe et communication</div>
+  <div class="competence-desc">
+    Participation active à des projets collaboratifs, prise d’initiatives, écoute et partage de compétences au sein de groupes pluridisciplinaires en contexte professionnel ou associatif.
+  </div>
+  <ul class="synth-list">
+    <li>Participation efficace aux travaux d’équipe (pair programming, code review, partage des tâches)</li>
+    <li>Prise de recul, rendus réguliers et retour d’expérience</li>
+    <li>Contribution positive à la dynamique de groupe</li>
+  </ul>
+</div>
+
+<p style="text-align:center;margin:36px 0 16px;font-size:1.13em;">
+<b>Pour voir comment ces compétences sont mises en pratique, retrouvez des exemples concrets dans mes <a href="/projects">projets</a>.</b>
+</p>
+
+</main>
+<Footer/>
+</body>
+</html>

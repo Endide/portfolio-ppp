@@ -1,23 +1,186 @@
 ---
 import Layout from '../layouts/DefaultLayout.astro';
 ---
-
+ 
 <Layout
-	title="Adrien FAURÉ"
-	description="Welcome to my portfolio"
-	heroImage="/indexcover.jpg"
+  title="Adrien FAURÉ"
+  description="Bienvenue sur mon portfolio"
 >
-	<p>
-	 I am currently a french student, deeply engaged in comprehensive training in development, with a particular focus on backend. My interest in this discipline stems from my fascination with database management and optimization, implementing robust architectures, and solving complex problems that power the invisible core of every application.	
-	</p>
 
-    <h3>My Resume</h3>
-	<h6><b>Lycée Stephane Hessel BAC (Mention Bien)</b> / 2020-2023</h6>
-	<h6><b>BUT Informatique Blagnac</b> / 2023-Today</h6>
-    <br>
-    <h3>My Stats</h3>	
-    <h6>Explore my coding journey through insightful statistics tracked by Wakatime.<h6>
-    <a href="https://wakatime.com/@ceb0a75a-8f2b-44a2-a5c3-7d734dcb27b3"><img src="https://wakatime.com/badge/user/ceb0a75a-8f2b-44a2-a5c3-7d734dcb27b3.svg" alt="Total time coded since Apr 16 2022" /></a>
-    <figure><embed src="https://wakatime.com/share/@AirbnbEcoPlus/b148646a-db63-4d03-8ab4-c0f309fb46dc.svg"></embed></figure>
-    <figure><embed src="https://wakatime.com/share/@AirbnbEcoPlus/66e7f8be-5fbb-4ef6-a72c-8d75ecb361c8.svg"></embed></figure>
+	<div class="profil-header">
+    <img src="/photo.png" alt="Photo de Adrien FAURÉ" class="profil-photo" />
+    <div>
+      <h2 class="profil-soustitre">Développeur Freelance</h2>
+    </div>
+  </div>
+  <p>
+
+  <p>
+    Actuellement étudiant français, je suis engagé dans une formation complète en développement, avec un intérêt particulier pour le backend. Ma passion pour ce domaine provient de ma fascination pour la gestion et l’optimisation des bases de données, la mise en place d’architectures robustes et la résolution de problèmes complexes au cœur invisible de chaque application.
+  </p>
+
+  <h3 class="cv-timeline-title">Mon CV</h3>
+
+<div class="cv-timeline">
+  <div class="cv-step">
+    <span class="cv-dot"></span>
+    <div class="cv-label">Lycée Stéphane Hessel <span class="cv-period">BAC (Mention Bien)  /  2020-2023</span></div>
+  </div>
+  <div class="cv-step">
+    <span class="cv-dot"></span>
+    <div class="cv-label">B.U.T. Informatique, Blagnac <span class="cv-period">/ 2023 – Aujourd’hui</span></div>
+  </div>
+</div>
+
+  <h3>Compétences développées lors de mon cursus</h3>
+
+<div class="competences-wrapper">
+  <div class="competence-card">
+    <div class="competence-title">Développement d’applications</div>
+    <div class="competence-desc">Conception et réalisation d’applications informatiques, du cahier des charges jusqu’au déploiement, en prenant en compte différents supports (web, mobile, IoT...).</div>
+  </div>
+  <div class="competence-card">
+    <div class="competence-title">Optimisation et analyse</div>
+    <div class="competence-desc">Sélection et implémentation d'algorithmes adaptés selon les problématiques&nbsp;; analyse, amélioration et optimisation des applications pour garantir leur performance et leur efficacité.</div>
+  </div>
+  <div class="competence-card">
+    <div class="competence-title">Administration de services informatiques</div>
+    <div class="competence-desc">Installation et configuration de postes de travail, déploiement et gestion de services dans des architectures réseaux.</div>
+  </div>
+  <div class="competence-card">
+    <div class="competence-title">Gestion et sécurité des bases de données</div>
+    <div class="competence-desc">Conception de schémas relationnels à partir de cahiers des charges, optimisation et sécurisation des bases de données, interaction avec des applications réelles.</div>
+  </div>
+  <div class="competence-card">
+    <div class="competence-title">Gestion de projet et conduite</div>
+    <div class="competence-desc">Identification et analyse des besoins métiers, suivi de projets en collaboration avec des utilisateurs et des clients, démarche qualité tout au long du cycle de développement.</div>
+  </div>
+  <div class="competence-card">
+    <div class="competence-title">Travail en équipe et collaboration</div>
+    <div class="competence-desc">Travail collaboratif au sein d’équipes pluridisciplinaires, valorisation des rôles dans un projet informatique, communication et adaptation dans un cadre professionnel.</div>
+  </div>
+</div>
+
+
+  <h3>Mes statistiques</h3>
+  <h6>Découvrez mon parcours de développement à travers des statistiques détaillées grâce à Wakatime.</h6>
+  <a href="https://wakatime.com/@ceb0a75a-8f2b-44a2-a5c3-7d734dcb27b3"><img src="https://wakatime.com/badge/user/ceb0a75a-8f2b-44a2-a5c3-7d734dcb27b3.svg" alt="Temps total de codage depuis le 16 avril 2022" /></a>
+  <figure><embed src="https://wakatime.com/share/@AirbnbEcoPlus/b148646a-db63-4d03-8ab4-c0f309fb46dc.svg"></embed></figure>
+  <figure><embed src="https://wakatime.com/share/@AirbnbEcoPlus/66e7f8be-5fbb-4ef6-a72c-8d75ecb361c8.svg"></embed></figure>
 </Layout>
+
+
+<style>
+	/* HEADER PROFIL */
+.profil-header {
+  display: flex;
+  flex-direction: column;  /* Pour mettre les éléments en colonne */
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  margin-top: 24px;
+  justify-content: center;
+}
+.profil-photo {
+  width: 450px;          /* Taille carrée supérieure */
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;   /* Coins très légèrement arrondis, carré propre */
+  box-shadow: 0 4px 24px 0 #ced8eb55;
+  border: 3px solid #e6ecfa;
+  background: #e6ecfa;
+}
+.profil-header h1 {
+  font-size: 2.2em;
+  margin-bottom: 8px;
+}
+.profil-soustitre {
+  color: #3e64ff;
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 4px;
+}
+.competences-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.competence-card {
+  flex: 1 1 340px;
+  max-width: 380px;
+  min-width: 260px;
+  background: linear-gradient(90deg, #f7f7fa 70%, #e5e8f2 100%);
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 8px 0 #d0d0d7cd;
+  transition: box-shadow 0.2s;
+  border-left: 8px solid #3e64ff;
+  margin-bottom: 12px;
+}
+.competence-card:nth-child(2){border-color:#ffb100;}
+.competence-card:nth-child(3){border-color:#009e60;}
+.competence-card:nth-child(4){border-color:#6b5b95;}
+.competence-card:nth-child(5){border-color:#524763;}
+.competence-card:nth-child(6){border-color:#ff4b3e;}
+
+.competence-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #23294d;
+}
+.competence-desc {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #35383e;
+}
+@media(max-width:850px){
+  .competences-wrapper{flex-direction:column;align-items:center;}
+  .competence-card{max-width:100%;}
+}
+
+.cv-timeline-title {
+  margin-bottom: 20px;
+}
+.cv-timeline {
+  position: relative;
+  margin: 32px 0 32px 12px;
+  padding-left: 22px;
+  border-left: 3px solid #3e64ff;
+  max-width: 440px;
+}
+.cv-step {
+  position: relative;
+  padding: 18px 0 12px 32px;
+}
+.cv-step:last-child {padding-bottom:0;}
+.cv-dot {
+  position: absolute;
+  left: -37px;
+  top: 24px;
+  width: 17px;
+  height: 17px;
+  background: #fff;
+  border: 4px solid #3e64ff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #e5e8f2;
+  z-index: 5;
+}
+.cv-label {
+  font-size: 1.12em;
+  font-weight: bold;
+  color: #23294d;
+}
+.cv-period {
+  font-size: 0.97em;
+  color: #555a6f;
+  margin-left: 6px;
+}
+@media (max-width: 600px) {
+  .cv-timeline { max-width: 100%; }
+  .cv-step { padding-left: 20px;}
+}
+</style>

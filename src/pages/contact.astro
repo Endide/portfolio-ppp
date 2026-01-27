@@ -5,51 +5,56 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Icon } from 'astro-icon/components'
 ---
-
+  
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title=Contact description={SITE_DESCRIPTION} />
-	</head>
-    <style>
-      span {
-           font-size: 2em;
-          }
-      a {
-        text-decoration: none;
-        color: black;
-        display: inline-block;
-        margin-top: 8px;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-     .social {
-        text-align: center;
-    } 
-    
-    </style>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-            <h1>Contact Me</h1>
-            <p>Welcome to my contact page! Feel free to leave me a message, a question, or even a suggestion. I am always open to new opportunities for collaboration and learning.</p>
-                      <p> <span id="countdown">TIME</span>
- The countdown will end on the day of my graduation. In the meantime, I remain focused on my studies and development projects.</p> 
- <br>
- <h4>Social Media</h4>
- <div class="social">
-<a href="https://github.com/AirbnbEcoPlus"><Icon name="github" size={48} /></a>
-<a href="https://fr.linkedin.com/in/adrien-fauré-8b7411233"><Icon name="linkedin" size={48} /></a>
- </div>
- <br>
- <h4>Contact Information</h4>
- <p>Mail : <b>pro.adrienfaure@outlook.com</b></p>
- <p>Phone number : <b>0652619066</b></p>
- <h4>Sponsor</h4>
- <p>I'm passionate about contributing to open-source projects and making a positive impact on the developer community. If you appreciate my work and want to help me continue creating and maintaining open-source projects, consider sponsoring me on GitHub Sponsors. Your support will help me dedicate more time and resources to open-source development.</p>
- <iframe src="https://github.com/sponsors/AirbnbEcoPlus/button" title="Sponsor AirbnbEcoPlus" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
-        </main>
-		<Footer/>
-	</body>
-    <script src="/js/countdown.js" is:inline></script>
+<html lang="fr">
+<head>
+<BaseHead title="Contact" description={SITE_DESCRIPTION} />
+</head>
+<style>
+span {
+  font-size: 2em;
+}
+a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.social {
+  text-align: center;
+}
+</style>
+<body>
+<Header title={SITE_TITLE} />
+<main>
+<h1>Me contacter</h1>
+<p>Bienvenue sur ma page de contact ! N’hésitez pas à m’adresser un message, une question ou même une suggestion. Je reste ouvert à toutes nouvelles opportunités de collaboration et d’apprentissage.</p>
+<p>
+  <span id="countdown">TEMPS</span>
+  Le compte à rebours prendra fin le jour de ma diplomation. D’ici là, je reste entièrement investi dans mes études et mes projets de développement.
+</p>
+<br>
+<h4>Réseaux sociaux</h4>
+<div class="social">
+  <a href="https://github.com/AirbnbEcoPlus"><Icon name="github" size={48} /></a>
+  <a href="https://fr.linkedin.com/in/adrien-fauré-8b7411233"><Icon name="linkedin" size={48} /></a>
+</div>
+<br>
+<h4>Informations de contact</h4>
+<p>Mail : <b>pro.adrienfaure@outlook.com</b></p>
+<p>Téléphone : <b>0652619066</b></p>
+<h4>Sponsoring</h4>
+<p>
+  Je suis passionné par la contribution à des projets open source et par l’impact positif que je peux avoir sur la communauté des développeurs.  
+  Si vous appréciez mon travail et souhaitez m'aider à continuer à créer et maintenir des projets open source, vous pouvez me soutenir via GitHub Sponsors.  
+  Votre soutien m’aidera à consacrer plus de temps et de ressources au développement open source.
+</p>
+<iframe src="https://github.com/sponsors/AirbnbEcoPlus/button" title="Sponsor AirbnbEcoPlus" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+</main>
+<Footer/>
+</body>
+<script src="/js/countdown.js" is:inline></script>
 </html>
